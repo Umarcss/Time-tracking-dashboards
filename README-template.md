@@ -29,6 +29,15 @@ Users should be able to:
 ### Screenshot
 
 ![Desktop Screenshot](./design/desktop-design.jpg)
+![Mobile Screenshot](./design/mobile-design.jpg)
+![Active States Screenshot](./design/active-states.jpg)
+
+### Links
+
+- Solution URL: [Add your solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add your live site URL here](https://your-live-site-url.com)
+
+## My process
 
 ### Built with
 
@@ -63,7 +72,10 @@ In future projects, I'd like to explore:
 
 ## Author
 
-- Frontend Mentor - [@Umarcss](https://www.frontendmentor.io/profile/Umarcss)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Twitter - [@yourtwitterhandle](https://twitter.com/yourtwitterhandle)
+- LinkedIn - [@yourlinkedinprofile](https://www.linkedin.com/in/yourlinkedinprofile/)
+
 ## Acknowledgments
 
 Thanks to Frontend Mentor for providing such a great challenge to improve my skills.
