@@ -1,0 +1,294 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --purple: hsl(246, 80%, 60%);
+  --workColor: hsl(15, 100%, 70%);
+  --playColor: hsl(195, 74%, 62%);
+  --studyColor: hsl(348, 100%, 68%);
+  --exerciseColor: hsl(145, 58%, 55%);
+  --socialColor: hsl(264, 64%, 52%);
+  --selfCareColor: hsl(43, 84%, 65%);
+  --veryDarkNavy: hsl(226, 43%, 10%);
+  --navy: hsl(235, 46%, 20%);
+  --lightPurple: hsl(235, 45%, 61%);
+  --veryLightNavy: hsl(236, 100%, 87%);
+  --cardRadius: 20px;
+  --cardPadding: 2em;
+  --fs-small: clamp(0.85rem, 3vw, 0.9rem);
+  --fs-small-2: clamp(0.9rem, 3vw, 1.15rem);
+  --fs-small-3: clamp(0.85rem, 2vw, 1rem);
+  --fs-medium: clamp(1.05rem, 6vw, 3rem);
+  --fs-big: clamp(2rem, 6vw, 4rem);
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--veryDarkNavy);
+}
+
+.options {
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: hsla(0, 0%, 100%, 0.538);
+}
+
+.boards__content {
+  padding: 4em 2em;
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5em;
+  grid-template-areas: "main" "work" "play" "study" "exercise" "social" "self-care";
+}
+.boards__board--main {
+  color: var(--txtColor, hsl(0, 0%, 100%));
+  background-color: var(--navy);
+  border-radius: var(--cardRadius);
+  overflow: hidden;
+  grid-area: main;
+}
+.boards__board--main-header {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  background-color: var(--purple);
+  padding: var(--cardPadding);
+  border-radius: var(--cardRadius);
+}
+.boards__board--main-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em var(--cardPadding);
+}
+.boards__board-avatar {
+  width: 60px;
+  height: auto;
+  border: 3px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+}
+.boards__board-report {
+  display: block;
+  font-weight: 400;
+  color: hsla(0, 0%, 100%, 0.538);
+  font-size: var(--fs-small);
+  margin-block-end: 0.4em;
+}
+.boards__board-name {
+  font-weight: 300;
+  font-size: var(--fs-medium);
+}
+.boards__board-btn {
+  border: none;
+  background: none;
+  font-family: inherit;
+  color: hsla(0, 0%, 100%, 0.538);
+  font-weight: 300;
+  cursor: pointer;
+  font-size: var(--fs-small-2);
+}
+.boards__board-btn.active {
+  color: hsl(0, 0%, 100%);
+}
+.boards__board {
+  cursor: pointer;
+}
+.boards__board.animated {
+  animation: animate 0.5s forwards;
+}
+.boards__board--work {
+  color: hsl(0, 0%, 100%);
+  background-color: var(--workColor);
+  border-radius: var(--cardRadius);
+  overflow: hidden;
+  grid-area: work;
+}
+.boards__board--play {
+  color: hsl(0, 0%, 100%);
+  background-color: var(--playColor);
+  border-radius: var(--cardRadius);
+  overflow: hidden;
+  grid-area: play;
+}
+.boards__board--study {
+  color: hsl(0, 0%, 100%);
+  background-color: var(--studyColor);
+  border-radius: var(--cardRadius);
+  overflow: hidden;
+  grid-area: study;
+}
+.boards__board--exercise {
+  color: hsl(0, 0%, 100%);
+  background-color: var(--exerciseColor);
+  border-radius: var(--cardRadius);
+  overflow: hidden;
+  grid-area: exercise;
+}
+.boards__board--social {
+  color: hsl(0, 0%, 100%);
+  background-color: var(--socialColor);
+  border-radius: var(--cardRadius);
+  overflow: hidden;
+  grid-area: social;
+}
+.boards__board--self-care {
+  color: hsl(0, 0%, 100%);
+  background-color: var(--selfCareColor);
+  border-radius: var(--cardRadius);
+  overflow: hidden;
+  grid-area: self-care;
+}
+.boards__board-bg {
+  position: relative;
+  height: 35px;
+  z-index: 1;
+}
+.boards__board-bg img {
+  position: absolute;
+  top: -1em;
+  right: 1em;
+}
+.boards__board-body {
+  position: relative;
+  padding: var(--cardPadding);
+  border-radius: var(--cardRadius) var(--cardRadius) 0 0;
+  background-color: var(--navy);
+  z-index: 100;
+}
+.boards__board-body--top, .boards__board-body--bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.boards__board-body--top {
+  margin-block-end: 1em;
+}
+.boards__board-category {
+  font-size: var(--fs-small-2);
+}
+.boards__board-last-time {
+  margin-inline-start: 1em;
+  color: hsla(0, 0%, 100%, 0.538);
+  font-weight: 400;
+  text-wrap: balance;
+  white-space: nowrap;
+  font-size: var(--fs-small-3);
+}
+.boards__board-time {
+  font-weight: 300;
+  font-size: var(--fs-big);
+}
+
+@media (36rem <= width) {
+  .boards__board--main-body {
+    justify-content: center;
+    gap: 3em;
+  }
+}
+@media (48rem <= width) {
+  .options:hover .dot {
+    background-color: hsl(0, 0%, 100%);
+  }
+  .dot {
+    transition: background-color 0.3s, transform 0.3s 0.2s;
+  }
+  .boards__content {
+    grid-template-areas: "main work play" "main study exercise" "main social self-care";
+    grid-auto-columns: 1fr;
+  }
+  .boards__board--main-header {
+    height: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: var(--cardRadius);
+  }
+  .boards__board--main-body {
+    padding: 3em var(--cardPadding) 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2em;
+  }
+  .boards__board-avatar {
+    width: 75px;
+    margin-block-end: 2em;
+  }
+  .boards__board-body {
+    transition: background-color 0.3s;
+  }
+  .boards__board-body--bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .boards__board-last-time {
+    margin: 0.5em 0;
+  }
+  .boards__board {
+    cursor: pointer;
+  }
+  .boards__board:hover .options .dot:first-child {
+    transform: translateX(-2px);
+  }
+  .boards__board:hover .options .dot:last-child {
+    transform: translateX(2px);
+  }
+  .boards__board:hover .boards__board-body {
+    background-color: hsl(236, 41%, 34%);
+  }
+  .boards__board-btn {
+    transition: color 0.3s;
+  }
+  .boards__board-btn:hover {
+    color: hsl(0, 0%, 100%);
+  }
+  .boards__board-name {
+    font-size: 2.35rem;
+  }
+}
+@media (56rem <= width) {
+  .boards__content {
+    grid-template-areas: "main work play study" "main exercise social self-care";
+  }
+  .boards__board--exercise .boards__board-bg {
+    top: 1em;
+  }
+  .boards__board--main-header {
+    height: 65%;
+  }
+  .boards__board-avatar {
+    width: 90px;
+  }
+  .boards__board-bg {
+    height: 45px;
+  }
+  .boards__board--main-body {
+    padding: var(--cardPadding);
+  }
+}
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=style.css.map */

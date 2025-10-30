@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/script.js" defer></script>
+</head>
+
+<body>
+
+  <main>
+    <section class="boards">
+      <div class="boards__content">
+
+        <div class="boards__board--main">
+          <div class="boards__board--main-header">
+            <img width="234" height="234" src="/images/image-jeremy.png" alt="" class="boards__board-avatar">
+            <div class="boards__board-info">
+              <span class="boards__board-report">Report for</span>
+              <p class="boards__board-name">Jeremy Robson</p>
+            </div>
+          </div>
+          <div class="boards__board--main-body">
+            <button class="boards__board-btn boards__board-btn-daily" aria-label="Show daily results">Daily</button>
+            <button class="boards__board-btn boards__board-btn-weekly" aria-label="Show weekly results">Weekly</button>
+            <button class="boards__board-btn boards__board-btn-monthly"
+              aria-label="Show monthly results">Monthly</button>
+          </div>
+        </div>
+
+        <div class="boards__board boards__board--work">
+          <div class="boards__board-bg">
+            <img width="79" height="79" loading="lazy" src="/images/icon-work.svg" alt="">
+          </div>
+          <div class="boards__board-body">
+            <div class="boards__board-body--top">
+              <span class="boards__board-category"></span>
+              <div class="dots">
+                <button class="options">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </button>
+              </div>
+            </div>
+            <div class="boards__board-body--bottom">
+              <span class="boards__board-time"></span>
+              <span class="boards__board-last-time"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="boards__board boards__board--play">
+          <div class="boards__board-bg">
+            <img width="76" height="77" loading="lazy" src="/images/icon-play.svg" alt="">
+          </div>
+          <div class="boards__board-body">
+            <div class="boards__board-body--top">
+              <span class="boards__board-category"></span>
+              <div class="dots">
+                <button class="options">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </button>
+              </div>
+            </div>
+            <div class="boards__board-body--bottom">
+              <span class="boards__board-time"></span>
+              <span class="boards__board-last-time"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="boards__board boards__board--study">
+          <div class="boards__board-bg">
+            <img width="79" height="79" loading="lazy" src="/images/icon-study.svg" alt="">
+          </div>
+          <div class="boards__board-body">
+            <div class="boards__board-body--top">
+              <span class="boards__board-category"></span>
+              <div class="dots">
+                <button class="options">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </button>
+              </div>
+            </div>
+            <div class="boards__board-body--bottom">
+              <span class="boards__board-time"></span>
+              <span class="boards__board-last-time"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="boards__board boards__board--exercise">
+          <div class="boards__board-bg">
+            <img width="81" height="55" loading="lazy" src="/images/icon-exercise.svg" alt="">
+          </div>
+          <div class="boards__board-body">
+            <div class="boards__board-body--top">
+              <span class="boards__board-category"></span>
+              <div class="dots">
+                <button class="options">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </button>
+              </div>
+            </div>
+            <div class="boards__board-body--bottom">
+              <span class="boards__board-time"></span>
+              <span class="boards__board-last-time"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="boards__board boards__board--social">
+          <div class="boards__board-bg">
+            <img width="75" height="100" loading="lazy" src="/images/icon-social.svg" alt="">
+          </div>
+          <div class="boards__board-body">
+            <div class="boards__board-body--top">
+              <span class="boards__board-category"></span>
+              <div class="dots">
+                <button class="options">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </button>
+              </div>
+            </div>
+            <div class="boards__board-body--bottom">
+              <span class="boards__board-time"></span>
+              <span class="boards__board-last-time"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="boards__board boards__board--self-care">
+          <div class="boards__board-bg">
+            <img width="67" height="67" loading="lazy" src="/images/icon-self-care.svg" alt="">
+          </div>
+          <div class="boards__board-body">
+            <div class="boards__board-body--top">
+              <span class="boards__board-category"></span>
+              <div class="dots">
+                <button class="options">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </button>
+              </div>
+            </div>
+            <div class="boards__board-body--bottom">
+              <span class="boards__board-time"></span>
+              <span class="boards__board-last-time"></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Challenge by Frontend Mentor - https://www.frontendmentor.io?ref=challenge -->
+
+</body>
+
+</html>
