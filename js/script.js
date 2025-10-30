@@ -1,6 +1,6 @@
 const allBoards = document.querySelectorAll(".boards__board");
 const allBtns = document.querySelectorAll(".boards__board-btn");
-const SRC = "/data.json";
+const SRC = "./data.json";
 let term;
 let isAnimated = false;
 fetch(SRC)
